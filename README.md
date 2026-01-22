@@ -6,76 +6,76 @@ https://github.com/user-attachments/assets/1cbd4ac0-007d-44dc-ab76-68cac01af623
 
 
 
-# React + TypeScript + Vite
+Wordle Clone - React + TypeScript
+A fully functional Wordle clone built with React, TypeScript, and Vite. This project replicates the core mechanics of the popular word game, including keyboard input handling, color-coded feedback, and game state persistence for the current session.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Features
+Keyboard Support: Play using your physical keyboard.
 
-Currently, two official plugins are available:
+Game Logic:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🟩 Green: Letter is in the word and in the correct spot.
 
-## React Compiler
+🟨 Yellow: Letter is in the word but in the wrong spot.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+⬜ Gray: Letter is not in the word in any spot.
 
-## Expanding the ESLint configuration
+Win/Loss States: Immediate feedback when you guess the word or run out of attempts.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Responsive UI: Clean, centered board layout using CSS Flexbox/Grid.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Type Safety: Built with TypeScript for robust code and better developer experience.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+🛠️ Tech Stack
+Framework: React
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Language: TypeScript
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Build Tool: Vite
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Styling: CSS3 (Custom properties and Flexbox)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+📦 Installation & Setup
+Clone the repository:
+
+Bash
+
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+Navigate to the directory:
+
+Bash
+
+cd wordle-clone
+Install dependencies:
+
+Bash
+
+npm install
+Run the development server:
+
+Bash
+
+npm run dev
+🎮 How to Play
+Guess the WORDLE in six tries.
+
+Each guess must be a valid five-letter word. Hit the enter button to submit.
+
+After each guess, the color of the tiles will change to show how close your guess was to the word.
+
+📝 Implementation Details
+Game Logic Workflow
+The app uses a centralized state in App.tsx to track the solution, current attempts, and the game status.
+
+Keyboard Handling: Uses a window event listener within a useEffect hook to capture keystrokes globally.
+
+Tile Validation: The Line component dynamically calculates the CSS classes (correct, exists, incorrect) only after a guess is submitted (isFinal).
+
+🛠️ Future Improvements
+[ ] Add a virtual on-screen keyboard.
+
+[ ] Integrate a real dictionary API for word validation.
+
+[ ] Add "Flip" and "Bounce" animations for tile reveals.
+
+[ ] Implement Dark Mode support.
