@@ -7,6 +7,7 @@ https://github.com/user-attachments/assets/1cbd4ac0-007d-44dc-ab76-68cac01af623
 
 
 Wordle Clone - React + TypeScript
+
 A fully functional Wordle clone built with React, TypeScript, and Vite. This project replicates the core mechanics of the popular word game, including keyboard input handling, color-coded feedback, and game state persistence for the current session.
 
 🚀 Features
@@ -27,6 +28,7 @@ Responsive UI: Clean, centered board layout using CSS Flexbox/Grid.
 Type Safety: Built with TypeScript for robust code and better developer experience.
 
 🛠️ Tech Stack
+
 Framework: React
 
 Language: TypeScript
@@ -35,28 +37,17 @@ Build Tool: Vite
 
 Styling: CSS3 (Custom properties and Flexbox)
 
+
 📦 Installation & Setup
-Clone the repository:
 
-Bash
+1. Clone the repository: git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
 
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-Navigate to the directory:
+2. Navigate to the directory: cd wordle-clone
 
-Bash
+3. Install dependencies: npm install
 
-cd wordle-clone
-Install dependencies:
+4. Run the development server: npm run dev
 
-Bash
-
-npm install
-
-Run the development server:
-
-Bash
-
-npm run dev
 
 🎮 How to Play
 Guess the WORDLE in six tries.
@@ -76,8 +67,7 @@ Tile Validation: The Line component dynamically calculates the CSS classes (corr
 
 
 🛠️ Future Improvements
-
-[ ] Add a virtual on-screen keyboard.
-[ ] Integrate a real dictionary API for word validation.
-[ ] Add "Flip" and "Bounce" animations for tile reveals.
-[ ] Implement Dark Mode support.
+1. Add a virtual on-screen keyboard.
+2. Integrate a real dictionary API for word validation.
+3. Add "Flip" and "Bounce" animations for tile reveals.
+4. Implement Dark Mode support.
