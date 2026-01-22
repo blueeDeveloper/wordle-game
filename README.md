@@ -51,17 +51,20 @@ Install dependencies:
 Bash
 
 npm install
+
 Run the development server:
 
 Bash
 
 npm run dev
+
 🎮 How to Play
 Guess the WORDLE in six tries.
 
 Each guess must be a valid five-letter word. Hit the enter button to submit.
 
 After each guess, the color of the tiles will change to show how close your guess was to the word.
+
 
 📝 Implementation Details
 Game Logic Workflow
@@ -71,11 +74,10 @@ Keyboard Handling: Uses a window event listener within a useEffect hook to captu
 
 Tile Validation: The Line component dynamically calculates the CSS classes (correct, exists, incorrect) only after a guess is submitted (isFinal).
 
+
 🛠️ Future Improvements
+
 [ ] Add a virtual on-screen keyboard.
-
 [ ] Integrate a real dictionary API for word validation.
-
 [ ] Add "Flip" and "Bounce" animations for tile reveals.
-
 [ ] Implement Dark Mode support.
