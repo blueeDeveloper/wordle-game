@@ -18,7 +18,6 @@ function App() {
       if (isGameOver) return;
 
       if (e.key === "Enter") {
-        debugger;
         if (currentGuess.length !== 5) {
           return;
         }
@@ -73,8 +72,7 @@ function App() {
         "SLUNG",
         "FARCE",
       ];
-      //setSolution(words[Math.floor(Math.random() * words?.length)])
-      setSolution("FARCE");
+      setSolution(words[Math.floor(Math.random() * words?.length)])
     };
     fetchWord();
   }, []);
